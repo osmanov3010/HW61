@@ -22,7 +22,7 @@ public class PrinterAppl {
 
             if (counter != 0) {
                 printers[counter - 1].setNextThread(threads[counter]);
-                if ((counter + 1) == COUNT_OF_THREADS) { // last one
+                if ((counter + 1) == COUNT_OF_THREADS) { // if last one
                     printers[counter].setNextThread(threads[0]);
                 }
             }
@@ -30,7 +30,7 @@ public class PrinterAppl {
             counter++;
         }
 
-        threads[0].interrupt();
+        threads[0].interrupt(); // for starting work
 
     }
 }
